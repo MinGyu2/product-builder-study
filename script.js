@@ -1,3 +1,25 @@
+// 테마 토글 기능
+const themeBtn = document.getElementById('theme-btn');
+const root = document.documentElement;
+
+// 페이지 로드 시 기존 테마 설정 확인
+const savedTheme = localStorage.getItem('theme') || 'light';
+root.setAttribute('data-theme', savedTheme);
+updateThemeButton(savedTheme);
+
+themeBtn.addEventListener('click', () => {
+    const currentTheme = root.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    root.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeButton(newTheme);
+});
+
+function updateThemeButton(theme) {
+    themeBtn.innerText = theme === 'light' ? '🌙 다크 모드' : '☀️ 라이트 모드';
+}
+
 document.getElementById('generate-btn').addEventListener('click', function() {
     const resultsContainer = document.getElementById('lotto-results');
     resultsContainer.innerHTML = ''; // 기존 결과 초기화
