@@ -109,6 +109,66 @@ button {
 button:hover { background-color: var(--btn-hover); }
 button:active { transform: scale(0.98); }
 
+/* 제휴 문의 섹션 스타일 */
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--plus-color);
+    margin: 3rem 0;
+    opacity: 0.3;
+}
+
+.partnership-section {
+    text-align: left;
+}
+
+.partnership-section h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.partnership-section .sub-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: var(--sub-text-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--plus-color);
+    border-radius: 8px;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--btn-bg);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--btn-bg);
+    color: var(--btn-bg);
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: var(--btn-bg);
+    color: white;
+}
+
 /* 번호 대역별 로또 공 색상 */
 .ball.range-1 { background-color: #fbc02d; } /* 1-10 */
 .ball.range-2 { background-color: #1976d2; } /* 11-20 */
