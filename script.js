@@ -14,6 +14,17 @@ themeBtn.addEventListener('click', () => {
     root.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeButton(newTheme);
+    
+    // Disqus 테마 리로드 (있는 경우에만 실행)
+    if (typeof DISQUS !== 'undefined') {
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = 'lotto-generator-main';
+                this.page.url = window.location.href;
+            }
+        });
+    }
 });
 
 function updateThemeButton(theme) {
