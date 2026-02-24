@@ -1,0 +1,80 @@
+body {
+    font-family: 'Pretendard', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 { color: #333; margin-bottom: 0.5rem; }
+p { color: #666; margin-bottom: 2rem; }
+
+#lotto-results {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.lotto-line {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.plus-sign {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #888;
+    margin: 0 5px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover { background-color: #357abd; }
+button:active { transform: scale(0.98); }
+
+/* 번호 대역별 로또 공 색상 */
+.ball.range-1 { background-color: #fbc02d; } /* 1-10 */
+.ball.range-2 { background-color: #1976d2; } /* 11-20 */
+.ball.range-3 { background-color: #d32f2f; } /* 21-30 */
+.ball.range-4 { background-color: #7b1fa2; } /* 31-40 */
+.ball.range-5 { background-color: #388e3c; } /* 41-45 */
